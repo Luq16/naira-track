@@ -110,27 +110,32 @@ Pop-up screens: **Add/Edit Transaction** (number pad first, then category picker
 
 Light and dark mode, following the phone's setting.
 
-## 6. Folder structure (planned)
+## 6. Folder structure
 
 ```
 Test_project/
 ├── PLAN.md
 ├── README.md
-├── app.json                 # Expo config (name, icon, bundle id)
-├── app/                     # Expo Router screens
-│   ├── (tabs)/
-│   │   ├── index.tsx        # Home
-│   │   ├── transactions.tsx
-│   │   ├── budgets.tsx
-│   │   └── more.tsx
-│   └── transaction/[id].tsx # add/edit modal
+├── app.json                   # Expo config (name, icon, bundle id ng.nairatrack.app)
 ├── src/
-│   ├── db/                  # Drizzle schema, migrations, seed data
-│   ├── components/          # UI pieces (forms, lists, charts)
-│   ├── lib/                 # money helpers, balance/budget calculations, CSV import
-│   └── theme/               # colours, spacing, fonts
-├── assets/                  # app icon, splash screen
-└── tests/
+│   ├── app/                   # Expo Router screens
+│   │   ├── _layout.tsx        # root stack, theme, splash/font loading
+│   │   ├── (tabs)/
+│   │   │   ├── _layout.tsx    # bottom tab bar
+│   │   │   ├── index.tsx      # Home
+│   │   │   ├── transactions.tsx
+│   │   │   ├── budgets.tsx
+│   │   │   └── more.tsx
+│   │   └── transaction/
+│   │       ├── new.tsx        # add modal
+│   │       └── [id].tsx       # edit modal (Milestone 3)
+│   ├── components/            # UI pieces (Screen, Card, AddButton, forms, lists, charts)
+│   ├── constants/theme.ts     # colours (light/dark), spacing, radii
+│   ├── hooks/                 # useAppTheme, useColorScheme
+│   ├── db/                    # Drizzle schema, migrations, seed data (Milestone 1)
+│   └── lib/                   # money helpers, balance/budget calculations, CSV import (Milestone 1+)
+├── assets/                    # app icon, splash screen
+└── tests/                     # unit + end-to-end tests (Milestone 1+)
 ```
 
 ## 7. Build milestones
