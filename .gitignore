@@ -21,8 +21,11 @@ ios/
 *.sqlite3
 
 # Environment and secrets
-.env
-.env*.local
+.env*
+!.env.example
+
+# Claude Code local settings
+.claude/settings.local.json
 
 # Logs and OS files
 npm-debug.*
@@ -30,3 +33,9 @@ yarn-debug.*
 yarn-error.*
 *.log
 .DS_Store
+
+# Expo extras
+.kotlin/
+.metro-health-check*
+*.tsbuildinfo
+*.pem
