@@ -1,0 +1,32 @@
+# Dependencies
+node_modules/
+
+# Expo / React Native
+.expo/
+dist/
+web-build/
+expo-env.d.ts
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.orig.*
+android/
+ios/
+
+# Local databases and exports
+*.db
+*.sqlite
+*.sqlite3
+
+# Environment and secrets
+.env
+.env*.local
+
+# Logs and OS files
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+*.log
+.DS_Store
